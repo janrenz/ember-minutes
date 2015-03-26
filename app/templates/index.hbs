@@ -1,6 +1,6 @@
 <div class="row">
   {{#each todo in model}}
-      <div class='col-md-3 todo'>
+      <div class='col-md-3 todo' data-speaker-id={{todo.id}}>
           <div class="wrapper">
             {{#link-to 'todo.show' todo}}{{todo.text}}{{/link-to}}
               <br />

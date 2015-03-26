@@ -1,0 +1,10 @@
+{{#link-to 'index'}}back{{/link-to}}
+<div class='todo' data-speaker-id={{model.id}}>
+    <div class="wrapper">
+      {{model.text}}
+        <br />
+        <button {{action 'destroyTodo' todo}}>
+            destroy
+        </button>
+    </div>
+</div>
