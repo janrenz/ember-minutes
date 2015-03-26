@@ -1,13 +1,13 @@
-<div class="row">
+<div class="row todo-list">
   {{#each todo in model}}
       <div class='col-md-3 todo' data-speaker-id={{todo.id}}>
-          <div class="wrapper">
-            {{#link-to 'todo.show' todo}}{{todo.text}}{{/link-to}}
+        {{#link-to 'todo.show' todo}}<div class="wrapper">
+            <h3>{{todo.text}}</h3>
               <br />
               <button {{action 'destroyTodo' todo}}>
                   destroy
               </button>
-          </div>
+          </div>{{/link-to}}
       </div>
   {{else}}
       <li>

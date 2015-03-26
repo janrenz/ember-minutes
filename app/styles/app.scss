@@ -1,6 +1,23 @@
 .todo .wrapper{
-  border: 2px solid #000000;
-  margin:10px;
-  padding: 10px;
+  border: 2px solid grey;
   min-height:70px;
+}
+.todo-list .wrapper:hover {
+  background-color: slategrey;
+}
+.todo > a{
+  color:white;
+  text-decoration: none;
+}
+body {
+  background-color: darkslategrey;
+  color: white;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: grey;
+  border: none;
+  color: white;
 }

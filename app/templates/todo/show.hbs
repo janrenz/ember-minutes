@@ -1,8 +1,8 @@
-{{#link-to 'index'}}back{{/link-to}}
 <div class='todo' data-speaker-id={{model.id}}>
     <div class="wrapper">
-      {{model.text}}
+      <h3>{{model.text}}</h3>
         <br />
-
+      {{model.description}}
     </div>
 </div>
+{{#link-to 'index'}}back{{/link-to}}
