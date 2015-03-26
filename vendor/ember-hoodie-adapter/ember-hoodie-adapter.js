@@ -59,10 +59,10 @@
     },
 
     createRecord: function (store, type, record) {
-      return wrapJqueryPromise(type.typeKey, hoodie.store.add(type.typeKey, record) );
+      return wrapJqueryPromise(type.typeKey, hoodie.store.add(type.typeKey, record.attributes()) );
     },
     updateRecord: function (store, type, record) {
-      return wrapJqueryPromise(type.typeKey, hoodie.store.update(type.typeKey, record.id, record ));
+      return wrapJqueryPromise(type.typeKey, hoodie.store.update(type.typeKey, record.id, record.attributes() ));
     },
 
     deleteRecord: function (store, type, record) {

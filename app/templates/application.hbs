@@ -1,52 +1,55 @@
-{{#if flash}}
-  <h2>{{flash}}</h2>
-{{/if}}
+<div class="container">
+    <h2 id="title">Welcome to Ember Minutes</h2>
+    {{#if flash}}
+      <h2>{{flash}}</h2>
+    {{/if}}
 
-{{#if accountService.hasValidSession}}
-  <button {{action 'signOut'}}>
-    Sign Out
-  </button>
-
-  <ul>
-    {{#each}}
-    <li>
-      {{text}}
-      -
-      <button {{action 'destroyTodo' this}}>
-        destroy
+    {{#if accountService.hasValidSession}}
+      <button {{action 'signOut'}}>
+        Sign Out
       </button>
-    </li>
+
+      <ul>
+        {{#each todo in model}}
+        <li>
+          {{todo.text}}
+          -
+          <button {{action 'destroyTodo' this}}>
+            destroy
+          </button>
+        </li>
+        {{else}}
+        <li>
+          No todos
+        </li>
+        {{/each}}
+      </ul>
+
+      <form {{action 'createTodo' on='submit'}}>
+        {{input value=text}}
+      </form>
     {{else}}
-    <li>
-      No todos
-    </li>
-    {{/each}}
-  </ul>
+      <div>
+        <div>
+          <label for="email">
+            Email
+          </label>
+          {{input value=user.email id="email"}}
+        </div>
+        <div>
+          <label for="password">
+            Password
+          </label>
+          {{input value=user.password id="password" type="password"}}
+        </div>
+        <button {{action 'signUp'}}>
+          Sign Up
+        </button>
+        <button {{action 'signIn'}}>
+          Sign In
+        </button>
+      </div>
+    {{/if}}
 
-  <form {{action 'createTodo' on='submit'}}>
-    {{input value=text}}
-  </form>
-{{else}}
-  <div>
-    <div>
-      <label for="email">
-        Email
-      </label>
-      {{input value=user.email id="email"}}
-    </div>
-    <div>
-      <label for="password">
-        Password
-      </label>
-      {{input value=user.password id="password" type="password"}}
-    </div>
-    <button {{action 'signUp'}}>
-      Sign Up
-    </button>
-    <button {{action 'signIn'}}>
-      Sign In
-    </button>
-  </div>
-{{/if}}
-
-{{outlet}}
+    {{outlet}}
+</div>
