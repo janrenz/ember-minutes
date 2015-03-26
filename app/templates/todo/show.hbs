@@ -1,8 +1,11 @@
-<div class='todo' data-speaker-id={{model.id}}>
-    <div class="wrapper">
-      <h3>{{model.text}}</h3>
-        <br />
-      {{model.description}}
-    </div>
+<div class="row todo-item">
+  <div class='todo col-md-12' data-speaker-id={{model.id}}>
+      <div class="wrapper">
+        <h3>{{model.text}}</h3>
+          <br />
+        {{model.description}}
+      </div>
+  </div>
 </div>
-{{#link-to 'index'}}back{{/link-to}}
+
+{{#link-to 'index' class="button"}}back{{/link-to}}

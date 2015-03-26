@@ -1,5 +1,6 @@
 .todo .wrapper{
-  border: 2px solid grey;
+  border-left: 10px solid grey;
+  padding-left: 5px;
   min-height:70px;
 }
 .todo-list .wrapper:hover {
@@ -13,7 +14,7 @@ body {
   background-color: darkslategrey;
   color: white;
 }
-button, input, select, textarea {
+button, input, select, textarea, .button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
