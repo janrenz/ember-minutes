@@ -11,12 +11,14 @@
 
       <div class="row">
         {{#each todo in model}}
-        <div class='todo'>
-          {{todo.text}}
-          -
-          <button {{action 'destroyTodo' todo}}>
-            destroy
-          </button>
+        <div class='col-md-3 todo'>
+          <div class="wrapper">
+            {{todo.text}}
+            <br />
+            <button {{action 'destroyTodo' todo}}>
+              destroy
+            </button>
+          </div>
         </div>
         {{else}}
         <li>
