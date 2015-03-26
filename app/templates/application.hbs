@@ -9,21 +9,21 @@
         Sign Out
       </button>
 
-      <ul>
+      <div class="row">
         {{#each todo in model}}
-        <li>
+        <div class='todo'>
           {{todo.text}}
           -
-          <button {{action 'destroyTodo' this}}>
+          <button {{action 'destroyTodo' todo}}>
             destroy
           </button>
-        </li>
+        </div>
         {{else}}
         <li>
           No todos
         </li>
         {{/each}}
-      </ul>
+      </div>
 
       <form {{action 'createTodo' on='submit'}}>
         {{input value=text}}
