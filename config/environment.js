@@ -9,7 +9,8 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none' 'self' localhost localhost:6007",
       'script-src': "'self' 'unsafe-eval' localhost:6007",
-      'connect-src': "'self' localhost:6007"
+      'connect-src': "'self' localhost:6007",
+      'style-src': "'self' 'unsafe-inline'"
     },
     EmberENV: {
       FEATURES: {

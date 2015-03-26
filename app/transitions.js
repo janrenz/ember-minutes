@@ -7,7 +7,7 @@ export default function() {
     this.toRoute('todo.show'),
     this.use('explode', {
       matchBy: 'data-speaker-id',
-      use: ['flyTo', { duration } ]
+      use: ['webFlyTo', { duration } ]
     }, {
       use: ['toLeft', { duration } ]
     }),
