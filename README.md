@@ -19,8 +19,12 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
+* install hoodie see http://hood.ie/intro/#get-started
 
 ## Running / Development
+
+* run hoodie server
+* be sure to adapt the url of hoodie if needed in config and index.html
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
