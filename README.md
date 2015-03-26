@@ -20,6 +20,7 @@ You will need the following things properly installed on your computer.
 * `npm install`
 * `bower install`
 * install hoodie see http://hood.ie/intro/#get-started
+* create a local hoodie app `hoodie new myapp`
 
 ## Running / Development
 
