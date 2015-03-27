@@ -9,9 +9,15 @@ export default function() {
       matchBy: 'data-speaker-id',
       use: ['flyTo', { duration } ]
     }, {
+      matchBy: 'nav-id',
+      use: ['flyTo', { duration } ]
+    }, {
       use: ['toLeft', { duration } ]
     }),
     this.reverse('explode', {
+      matchBy: 'nav-id',
+      use: ['flyTo', { duration } ]
+    }, {
       matchBy: 'data-speaker-id',
       use: ['flyTo', { duration } ]
     }, {

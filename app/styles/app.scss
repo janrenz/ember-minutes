@@ -2,6 +2,9 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
+h3 {
+  transition: color 1s ease-in-out;
+}
 .header {
   margin-bottom:15px;
 }
@@ -24,7 +27,29 @@ body {
   padding-left: 5px;
   min-height:70px;
 }
+.itemnav div {
+  padding-left:15px;
+  float: left;
+  transition: border 1s ease-in-out;
+
+}
+.clearfix{
+  clear-after: both;
+}
+.itemnav .completed_true {
+  border-left: 10px solid darkgreen;
+  height:10px;
+  width:0px;
+}
+.itemnav .completed_false {
+  border-left: 10px solid orangered;
+  height:10px;
+  width:0px;
+}
 .todo.completed_true .wrapper{
+  & h3 {
+    color: grey;
+  }
   border-left: 5px solid darkgreen;
 }
 .todo.completed_false .wrapper{

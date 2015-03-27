@@ -1,7 +1,7 @@
 <div class="row todo-list">
   {{#each todo in model}}
     <div class="col-md-6">
-      <div class='todo completed_{{todo.completed}}' data-speaker-id={{todo.id}}>
+      <div class='todo completed_{{todo.completed}}' data-speaker-id={{todo.id}} nav-id={{todo.id}}>
         {{#link-to 'todo.show' todo}}
           <div class="wrapper">
             <h3>{{todo.text}}</h3><div class="truncate">{{todo.description}}</div>

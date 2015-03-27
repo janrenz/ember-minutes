@@ -1,12 +1,12 @@
 <div class="row todo-item">
   <div class="col-md-6">
-  <div class='todo completed_{{item.completed}}' data-speaker-id={{item.id}}>
-      <div class="wrapper">
-        <h3>{{view 'ember-contenteditable-view' editable=true value=item.text}}</h3>
-        {{view 'ember-contenteditable-view' editable=true value=item.description}}
-        {{item.createdAt}}
-      </div>
-  </div>
+    <div class='todo completed_{{item.completed}}' data-speaker-id={{item.id}}>
+        <div class="wrapper">
+          <h3>{{view 'ember-contenteditable-view' editable=true value=item.text}}</h3>
+          {{view 'ember-contenteditable-view' editable=true value=item.description}}
+          {{item.createdAt}}
+        </div>
+    </div>
   </div>
   <div class="col-md-6">
      {{#link-to 'index' class="btn button full-width"}}back{{/link-to}}
@@ -19,5 +19,17 @@
     notes
   </div>
 </div>
+
+        <div class="itemnav">
+{{#each todo in allItems}}
+              {{#link-to 'todo.show' todo}}
+            <div class='completed_{{todo.completed}}' nav-id={{todo.id}}>
+
+            </div>
+              {{/link-to}}
+{{/each}}
+            <div style="clearfix"></div>
+        </div>
+
 
 

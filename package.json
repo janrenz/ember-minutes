@@ -20,6 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
+    "broccoli-manifest": "0.0.5",
+    "broccoli-merge-trees": "^0.2.1",
     "broccoli-sass": "git://github.com/ef4/broccoli-sass",
     "ember-autosave": "0.2.0",
     "ember-cli": "0.2.1",
@@ -34,8 +36,11 @@
     "ember-cli-uglify": "1.0.1",
     "ember-data": "1.0.0-beta.16",
     "ember-export-application-global": "^1.0.2",
-    "liquid-fire": "git://github.com/ef4/liquid-fire#master"
+    "install": "^0.1.8",
+    "liquid-fire": "git://github.com/ef4/liquid-fire#master",
+    "npm": "^2.7.4"
   },
   "dependencies": {
+    "broccoli-merge-trees": "^0.2.1"
   }
 }

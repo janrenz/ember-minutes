@@ -69,10 +69,13 @@ Specify what it takes to deploy your app.
  - [x]  Add styling
  - [x]  Add single item view
  - [x]  Add animation in between views
- - [ ]  Make title editable
- - [ ]  Make description editable
+ - [x]  Make title editable
+ - [x]  Make description editable
  - [ ]  Allow adding of notes
- 
+ - [ ]  Show thumbnails of all items
+ - [ ]  Prev and Next Navigation in item view
+    
+  
 
 
  
