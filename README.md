@@ -58,7 +58,8 @@ Specify what it takes to deploy your app.
 
  
 ## TODO
- 
+
+ - [ ]  Persist todo state change
  - [ ]  Get basepath for hoodie js in index from config
  - [x]  Add styling
  - [x]  Add single item view
