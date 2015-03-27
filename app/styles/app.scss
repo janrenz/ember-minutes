@@ -35,26 +35,27 @@ h3 {
   float: left;
   width:20px;
   height:20px;
-  margin-right:20px;
+  margin-right:5px;
 }
 .itemnav div a div {
   width:20px;
   height:20px;
-  min-height:20px;
+  min-height:5px;
 }
 .nav_completed_true {
+  transition: color 1s ease-in-out;
   background-color: darkgreen;
   color: darkgreen;
-  border-left: 5px solid darkgreen;
+  border-left: 10px solid darkgreen;
+  width:20px;
+  height:20px;
+  min-height:20px;
 }
-.nav_completed_true > div, .nav_completed_true > a, .nav_completed_true > a:hover {
-  color: darkgreen;
-  background-color: darkgreen;
-}
+
 .nav_completed_false {
-  background-color: orangered;
   color: orangered;
-  border-left: 5px solid orangered;
+  background-color: orangered;
+  border-left: 10px solid orangered;
   width:20px;
   height:20px;
   min-height:20px;
