@@ -60,10 +60,13 @@ Specify what it takes to deploy your app.
 ## TODO
  
  - [ ]  Get basepath for hoodie js in index from config
- - [ ]  Add id to each model
- - [ ]  Add styling
- - [ ]  Add single item view
- - [ ]  Add animation in between views
+ - [x]  Add styling
+ - [x]  Add single item view
+ - [x]  Add animation in between views
+ - [ ]  Make title editable
+ - [ ]  Make description editable
+ - [ ]  Allow adding of notes
+ 
 
 
  

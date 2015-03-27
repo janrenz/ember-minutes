@@ -7,10 +7,9 @@
       <button {{action 'signOut'}}>
         Sign Out
       </button>
-
-      <form {{action 'createTodo' on='submit'}}>
-        {{input value=text}}
-      </form>
+        <form {{action 'createTodo' on='submit'}}>
+          {{input value=text}}
+        </form>
     {{else}}
       <div>
         <div>
