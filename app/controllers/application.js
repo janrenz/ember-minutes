@@ -3,11 +3,11 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
   actions: {
     createTodo: function () {
-
+      self = this;
       var record = this.store.createRecord('todo', {text: 'New item'});
 
       record.save().then(function () {
-        this.controller.transitionToRoute('todo.show', record.id);
+        self.transitionToRoute('todo.show', record.id);
       }, function (err) {
         ctrl.setFlash(err.message);
       });

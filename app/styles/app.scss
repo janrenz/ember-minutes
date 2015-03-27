@@ -1,7 +1,18 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+.header {
+  margin-bottom:15px;
+}
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.todo-list .todo {
+  margin-bottom: 15px;
+}
 .todo-list .wrapper:hover {
   background-color: #F0F8ff;
 }
