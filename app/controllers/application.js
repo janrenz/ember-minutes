@@ -1,6 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
+  actions: {
+    createTodo: function () {
+
+      var record = this.store.createRecord('todo', {text: 'New item'});
+
+      record.save().then(function () {
+        this.controller.transitionToRoute('todo.show', record.id);
+      }, function (err) {
+        ctrl.setFlash(err.message);
+      });
+    }
+  },
+
+
   flash:  null,
   user:   Ember.Object.create({
     email: null,

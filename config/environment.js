@@ -10,7 +10,8 @@ module.exports = function(environment) {
       'default-src': "'none' 'self' localhost localhost:6007",
       'script-src': "'self' 'unsafe-eval' localhost:6007",
       'connect-src': "'self' localhost:6007",
-      'style-src': "'self' 'unsafe-inline'"
+      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
+      'font-src': "'self' fonts.gstatic.com"
     },
     EmberENV: {
       FEATURES: {
