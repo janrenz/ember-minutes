@@ -1,6 +1,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
+  position: relative;
 }
 h3 {
   transition: color 1s ease-in-out;
@@ -13,6 +14,9 @@ h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.itemnav {
+
 }
 .todo-list .todo {
   margin-bottom: 15px;
@@ -39,12 +43,12 @@ h3 {
 .itemnav .completed_true {
   border-left: 10px solid darkgreen;
   height:10px;
-  width:0px;
+  width:10px;
 }
 .itemnav .completed_false {
   border-left: 10px solid orangered;
   height:10px;
-  width:0px;
+  width:10px;
 }
 .todo.completed_true .wrapper{
   & h3 {

@@ -7,9 +7,6 @@ export default Ember.Route.extend({
 
   actions: {
 
-    destroyTodo: function(todo) {
-      todo.destroyRecord();
-    },
     toggleTodo: function(todo) {
       todo.set('completed', !todo.get('completed'));
       todo.save();

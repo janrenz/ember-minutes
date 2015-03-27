@@ -23,8 +23,7 @@
         <div class="itemnav">
 {{#each todo in allItems}}
               {{#link-to 'todo.show' todo}}
-            <div class='completed_{{todo.completed}}' nav-id={{todo.id}}>
-
+            <div class='completed_{{todo.completed}}' nav-id='{{todo.id}}'>
             </div>
               {{/link-to}}
 {{/each}}

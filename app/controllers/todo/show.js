@@ -6,7 +6,10 @@ export default Ember.ObjectController.extend({
   needs: ['application'],
   allItems: Ember.computed.alias('controllers.application.model'),
   actions: {
-
+    destroyTodo: function() {
+      this.model.destroyRecord();
+      this.transitionToRoute('index');
+    },
   }
 
 });
