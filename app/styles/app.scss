@@ -1,18 +1,26 @@
-.todo .wrapper{
-  border-left: 10px solid grey;
-  padding-left: 5px;
-  min-height:70px;
-}
 .todo-list .wrapper:hover {
   background-color: slategrey;
 }
+
+.todo .wrapper{
+  transition: border 1s ease-in-out;
+  border-left: 5px solid slategrey;
+  padding-left: 5px;
+  min-height:70px;
+}
+.todo.completed_true .wrapper{
+  border-left: 5px solid darkgreen;
+}
+.todo.completed_false .wrapper{
+  border-left: 5px solid orangered;
+}
 .todo > a{
-  color:white;
+  color:darkslategrey;
   text-decoration: none;
 }
 body {
-  background-color: darkslategrey;
-  color: white;
+  background-color: white;
+  color: darkslategrey;
 }
 button, input, select, textarea, .button {
   font-family: inherit;
@@ -20,5 +28,5 @@ button, input, select, textarea, .button {
   line-height: inherit;
   background-color: grey;
   border: none;
-  color: white;
+  color: darkslategrey;
 }

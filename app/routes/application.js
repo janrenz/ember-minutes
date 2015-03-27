@@ -20,7 +20,10 @@ export default Ember.Route.extend({
     destroyTodo: function(todo) {
       todo.destroyRecord();
     },
-
+    toggleTodo: function(todo) {
+      todo.set('completed', !todo.get('completed'));
+      return false;
+    },
     signIn: function() {
       var ctrl     = this.get('controller');
       var email    = ctrl.get('user.email');

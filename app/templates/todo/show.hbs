@@ -1,10 +1,15 @@
 <div class="row todo-item">
-  <div class='todo col-md-12' data-speaker-id={{model.id}}>
+  <div class="col-md-6">
+  <div class='todo completed_{{model.completed}}' data-speaker-id={{model.id}}>
       <div class="wrapper">
         <h3>{{model.text}}</h3>
           <br />
         {{model.description}}
       </div>
+  </div>
+  </div>
+  <div class="col-md-6">
+    notes
   </div>
 </div>
 

@@ -1,5 +1,4 @@
 <div class="container">
-    <h2 id="title">Welcome to Ember Minutes</h2>
     {{#if flash}}
       <h2>{{flash}}</h2>
     {{/if}}
@@ -8,8 +7,6 @@
       <button {{action 'signOut'}}>
         Sign Out
       </button>
-
-
 
       <form {{action 'createTodo' on='submit'}}>
         {{input value=text}}
@@ -21,19 +18,17 @@
             Email
           </label>
           {{input value=user.email id="email"}}
-        </div>
-        <div>
           <label for="password">
             Password
           </label>
           {{input value=user.password id="password" type="password"}}
+          <button {{action 'signUp'}}>
+            Sign Up
+          </button>
+          <button {{action 'signIn'}}>
+            Sign In
+          </button>
         </div>
-        <button {{action 'signUp'}}>
-          Sign Up
-        </button>
-        <button {{action 'signIn'}}>
-          Sign In
-        </button>
       </div>
     {{/if}}
 
