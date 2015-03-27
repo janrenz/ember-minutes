@@ -1,19 +1,19 @@
 <div class="row todo-item">
   <div class="col-md-6">
-  <div class='todo completed_{{model.completed}}' data-speaker-id={{model.id}}>
+  <div class='todo completed_{{item.completed}}' data-speaker-id={{item.id}}>
       <div class="wrapper">
-        <h3>{{model.text}}</h3>
-          <br />
-        {{model.description}}
+        <h3>{{item.text}}</h3>
+        <br />
+        {{view 'ember-contenteditable-view' editable=true value=item.description}}
       </div>
   </div>
   </div>
   <div class="col-md-6">
      {{#link-to 'index' class="btn button full-width"}}back{{/link-to}}
-      <button {{action 'toggleTodo' model}} class="btn full-width mt10">
+      <button {{action 'toggleTodo' item}} class="btn full-width mt10">
           toggle State
       </button>
-      <button {{action 'destroyTodo' model}} class="btn mt10 full-width">
+      <button {{action 'destroyTodo' item}} class="btn mt10 full-width">
           Delete
       </button>
     notes
