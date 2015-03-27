@@ -22,10 +22,12 @@
 
         <div class="itemnav">
 {{#each todo in allItems}}
+    <div  nav-id='{{todo.id}}'>
+            <div  class='nav_completed_{{todo.completed}}'>
               {{#link-to 'todo.show' todo}}
-            <div class='completed_{{todo.completed}}' nav-id='{{todo.id}}'>
-            </div>
+                  <div>&#x2587;</div>
               {{/link-to}}
+            </div> </div>
 {{/each}}
             <div style="clearfix"></div>
         </div>

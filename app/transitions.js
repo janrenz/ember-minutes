@@ -1,7 +1,7 @@
 export default function() {
 
-  var duration = 300;
-
+  var duration = 400;
+  var duration_short = 200;
   this.transition(
     this.fromRoute('index'),
     this.toRoute('todo.show'),
@@ -16,12 +16,12 @@ export default function() {
     }),
     this.reverse('explode', {
       matchBy: 'data-speaker-id',
-      use: ['flyTo', { duration } ]
+      use: ['flyTo', { duration_short } ]
     }, {
       matchBy: 'nav-id',
-      use: ['flyTo', { duration } ]
+      use: ['flyTo', { duration_short } ]
     }, {
-      use: ['toRight', { duration } ]
+      use: ['toRight', { duration_short } ]
     })
   );
 
