@@ -1,16 +1,11 @@
 <div class="row todo-list">
   {{#each todo in model}}
       <div class='col-md-6 todo completed_{{todo.completed}}' data-speaker-id={{todo.id}}>
-        <div class="wrapper">
-          {{#link-to 'todo.show' todo}}<h3>{{todo.text}}</h3>{{/link-to}}
-            <br />
-            <button {{action 'destroyTodo' todo}}>
-                destroy
-            </button>
-            <button {{action 'toggleTodo' todo}}>
-                toggle State
-            </button>
+        {{#link-to 'todo.show' todo}}
+          <div class="wrapper">
+            <h3>{{todo.text}}</h3>
           </div>
+        {{/link-to}}
       </div>
   {{else}}
       <li>

@@ -9,11 +9,15 @@
   </div>
   </div>
   <div class="col-md-6">
-      <button {{action 'toggleTodo' model}} class="full-width">
+     {{#link-to 'index' class="btn button full-width"}}back{{/link-to}}
+      <button {{action 'toggleTodo' model}} class="btn full-width mt10">
           toggle State
+      </button>
+      <button {{action 'destroyTodo' model}} class="btn mt10 full-width">
+          Delete
       </button>
     notes
   </div>
 </div>
 
-{{#link-to 'index' class="button"}}back{{/link-to}}
+
