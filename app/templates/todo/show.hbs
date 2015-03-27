@@ -2,7 +2,7 @@
   <div class="col-md-6">
   <div class='todo completed_{{item.completed}}' data-speaker-id={{item.id}}>
       <div class="wrapper">
-        <h3>{{item.text}}</h3>
+        <h3>{{view 'ember-contenteditable-view' editable=true value=item.text}}</h3>
         <br />
         {{view 'ember-contenteditable-view' editable=true value=item.description}}
       </div>
