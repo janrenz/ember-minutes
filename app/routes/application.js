@@ -22,7 +22,7 @@ export default Ember.Route.extend({
     },
     toggleTodo: function(todo) {
       todo.set('completed', !todo.get('completed'));
-      return false;
+      todo.save();
     },
     signIn: function() {
       var ctrl     = this.get('controller');
