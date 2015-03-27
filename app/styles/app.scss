@@ -14,6 +14,9 @@
 .todo.completed_false .wrapper{
   border-left: 5px solid orangered;
 }
+.todo h3 {
+  margin-top:0px;
+}
 .todo > a{
   color:darkslategrey;
   text-decoration: none;
@@ -26,7 +29,10 @@ button, input, select, textarea, .button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  background-color: grey;
+  background-color: #cccccc;
   border: none;
   color: darkslategrey;
+}
+.full-width {
+  width: 100%;
 }
