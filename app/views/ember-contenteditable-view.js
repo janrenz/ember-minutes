@@ -6,12 +6,12 @@ export default Ember.View.extend({
   // Variables:
   editable: false,
   isUserTyping: false,
-  plaintext: false,
+  plaintext: true,
 
   // Properties:
   contenteditable: (function() {
     var editable = this.get('editable');
-    return editable ? 'true' : 'inherit';
+    return editable ? 'true' : '';
   }).property('editable'),
 
   // Processors:
@@ -41,7 +41,7 @@ export default Ember.View.extend({
     }
   },
 
-  keyUp: function(event) {
+  keyUp: function() {
     if (this.get('plaintext')) {
       return this.set('value', this.$().text());
     } else {

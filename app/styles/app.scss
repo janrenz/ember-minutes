@@ -18,6 +18,12 @@ h3 {
 .itemnav {
 
 }
+.todo-large {
+  font-size: 1.5em;
+  & h3 {
+    font-size: 2.5em;
+  }
+}
 .todo-list .todo {
   margin-bottom: 15px;
 }

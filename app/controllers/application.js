@@ -16,6 +16,22 @@ export default Ember.ArrayController.extend({
     }
   },
 
+  findNext:function(post){
+    var posts = this.get('model');
+    var currentIndex = posts.indexOf(post);
+    return posts.objectAt(currentIndex+1);
+  },
+  findPrev:function(post){
+    var posts = this.get('model');
+    var currentIndex = posts.indexOf(post);
+    return  posts.objectAt(currentIndex-1);
+  },
+  hasNext:function(post){
+    return this.get('model').indexOf(post)<this.get('model').get('length')-1;
+  },
+  hasPrev:function(post){
+    return this.get('model').indexOf(post)>0;
+  },
   flash:  null,
   user:   Ember.Object.create({
     email: null,

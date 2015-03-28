@@ -1,37 +1,59 @@
-<div class="row todo-item">
-  <div class="col-md-6">
-    <div class='todo completed_{{item.completed}}' data-speaker-id={{item.id}}>
+<div class="row">
+    <div class="col-md-12">
+<div class="itemnav">
+  {{#each todo in allItems}}
+      <div  nav-id='{{todo.id}}'>
+        {{#link-to 'todo.show' todo}}
+            <div  class='nav_completed_{{todo.completed}}'>
+
+            </div>
+        {{/link-to}}
+      </div>
+  {{/each}}
+    <div style="clearfix"></div>
+</div></div>
+</div>
+
+
+<div class="row todo-item mt10">
+  <div class="col-md-9">
+    <div class='todo todo-large completed_{{item.completed}}' data-speaker-id={{item.id}}>
         <div class="wrapper">
           <h3>{{view 'ember-contenteditable-view' editable=true value=item.text}}</h3>
-          {{view 'ember-contenteditable-view' editable=true value=item.description}}
-          {{item.createdAt}}
         </div>
+        {{view 'ember-contenteditable-view' editable=true value=item.description}}
+        {{item.createdAt}}
     </div>
   </div>
-  <div class="col-md-6">
-     {{#link-to 'index' class="btn button full-width"}}back{{/link-to}}
+  <div class="col-md-3">
+      <div class="btn-group btn-group-justified mt10">
+
+        {{#if hasPrevious}}
+            <a class="btn btn-default" {{action 'prev'}}>Previous</a>
+        {{else}}
+            <a class="btn btn-default disabled" >Previous</a>
+        {{/if}}
+        {{#link-to 'index' classNames="btn btn-default"}}Home{{/link-to}}
+        {{#if hasNext}}
+            <a class="btn btn-default" {{action 'next'}}>Next</a>
+        {{else}}
+            <a class="btn btn-default disabled" >Next</a>
+        {{/if}}
+      </div>
       <button {{action 'toggleTodo' item}} class="btn full-width mt10">
           toggle State
       </button>
       <button {{action 'destroyTodo' item}} class="btn mt10 full-width">
           Delete
       </button>
+
+
+
     notes
+    {{#each note in model.notes}}
+      {{note.body}}
+    {{/each}}
   </div>
 </div>
-
-        <div class="itemnav">
-{{#each todo in allItems}}
-    <div  nav-id='{{todo.id}}'>
-              {{#link-to 'todo.show' todo}}
-            <div  class='nav_completed_{{todo.completed}}'>
-
-            </div>
-              {{/link-to}}
-              </div>
-{{/each}}
-            <div style="clearfix"></div>
-        </div>
-
 
 
