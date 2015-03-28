@@ -48,6 +48,9 @@ h3 {
   height:20px;
   min-height:5px;
 }
+.itemnav div a.active div {
+  border:2px solid lightslategray;
+}
 .nav_completed_true {
   transition: color 1s ease-in-out;
   background-color: darkgreen;

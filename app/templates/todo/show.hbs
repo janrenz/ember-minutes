@@ -4,9 +4,8 @@
   {{#each todo in allItems}}
       <div  nav-id='{{todo.id}}'>
         {{#link-to 'todo.show' todo}}
-            <div  class='nav_completed_{{todo.completed}}'>
-
-            </div>
+              <div  class='active nav_completed_{{todo.completed}}' >
+              </div>
         {{/link-to}}
       </div>
   {{/each}}
