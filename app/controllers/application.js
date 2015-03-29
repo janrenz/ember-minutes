@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
   sortProperties: ['completed'],//updatedAt
-  sortAscending: true,
+  sortAscending: false,
   actions: {
     createTodo: function () {
       self = this;

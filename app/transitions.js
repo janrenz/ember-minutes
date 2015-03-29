@@ -12,7 +12,7 @@ export default function() {
       matchBy: 'nav-id',
       use: ['flyTo', { duration } ]
     }, {
-      use: ['toLeft', { duration } ]
+      use: ['toDown', { duration } ]
     }),
     this.reverse('explode', {
       matchBy: 'data-speaker-id',
@@ -21,7 +21,7 @@ export default function() {
       matchBy: 'nav-id',
       use: ['flyTo', { duration_short } ]
     }, {
-      use: ['toRight', { duration_short } ]
+      use: ['toUp', { duration_short } ]
     })
   );
 

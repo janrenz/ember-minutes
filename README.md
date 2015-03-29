@@ -73,8 +73,9 @@ Specify what it takes to deploy your app.
  - [x]  Make description editable
  - [ ]  Allow adding of notes
  - [ ]  Show thumbnails of all items
- - [ ]  Prev and Next Navigation in item view
-    
+ - [ ]  Sorting
+ - [X]  Prev and Next Navigation in item view
+ - [ ]  Logo (Tomster in Hoodie?)  
   
 
 

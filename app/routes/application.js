@@ -36,6 +36,7 @@ export default Ember.Route.extend({
       this.accountService.signOut().catch(function(err) {
         ctrl.setFlash(err.message);
       });
+      duocument.location.href= '/';
     }
   }
 });

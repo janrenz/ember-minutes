@@ -35,24 +35,26 @@ h3 {
   transition: border 1s ease-in-out;
   border-left: 5px solid slategrey;
   padding-left: 5px;
-  min-height:70px;
 }
 .itemnav div {
   float: left;
   width:20px;
   height:20px;
   margin-right:5px;
+  transition: color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
 }
 .itemnav div a div {
   width:20px;
   height:20px;
   min-height:5px;
+  transition: color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
 }
 .itemnav div a.active div {
   border:2px solid lightslategray;
 }
 .nav_completed_true {
-  transition: color 1s ease-in-out;
   background-color: darkgreen;
   color: darkgreen;
   border-left: 10px solid darkgreen;

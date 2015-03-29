@@ -1,6 +1,6 @@
 <div class="row todo-list">
   {{#each todo in model}}
-    <div class="col-md-6">
+    <div class="col-md-6 col-lg-4">
       <div class='todo completed_{{todo.completed}}' data-speaker-id={{todo.id}} nav-id={{todo.id}}>
         {{#link-to 'todo.show' todo}}
           <div class="wrapper">

@@ -66,7 +66,9 @@
     deleteRecord: function (store, type, record) {
       return wrapJqueryPromise(type.typeKey, hoodie.store.remove(type.typeKey, record.id) );
     },
-
+    destroyRecord: function (store, type, record) {
+      return wrapJqueryPromise(type.typeKey, hoodie.store.remove(type.typeKey, record.id) );
+    },
     createRecord: function (store, type, record) {
       return wrapJqueryPromise(type.typeKey, hoodie.store.add(type.typeKey, record.attributes()) );
     }
