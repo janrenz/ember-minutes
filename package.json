@@ -24,9 +24,10 @@
     "broccoli-merge-trees": "^0.2.1",
     "broccoli-sass": "git://github.com/ef4/broccoli-sass",
     "ember-autosave": "0.2.0",
-    "ember-cli": "0.2.1",
+    "ember-cli": "0.2.2",
     "ember-cli-app-version": "0.3.3",
     "ember-cli-babel": "^4.0.0",
+    "ember-cli-bootstrap-datepicker": "^0.3.4",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "0.0.8",
     "ember-cli-htmlbars": "0.7.4",
@@ -41,7 +42,5 @@
     "liquid-fire": "git://github.com/ef4/liquid-fire#master",
     "npm": "^2.7.4"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }

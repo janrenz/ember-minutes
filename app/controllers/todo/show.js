@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
     },
     toggleTodo: function(todo) {
       todo.set('completed', !todo.get('completed'));
-      todo.save();
+      //todo.save();
     },
     prev: function(){
       this.transitionToRoute('todo.show',this.get('controllers.application').findPrev(this.get('model')));

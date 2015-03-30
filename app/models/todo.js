@@ -5,6 +5,6 @@ export default DS.HoodieModel.extend({
   description: DS.attr('string',{defaultValue: '...'}),
   completed: DS.attr('boolean', {defaultValue: false}),
   notes: DS.hasMany('note', { async: true }),
-  assignees: DS.hasMany('note', { async: true }),
+  assignees: DS.hasMany('assignee', { async: true }),
   dueDate: DS.attr('date')
 });
