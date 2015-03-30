@@ -6,13 +6,13 @@
             </a>
         </div>
 
-    <div class="navbar-right">
+    <div class="navbar-right"><div class="titlebar">
   {{#if accountService.hasValidSession}}
-      <button {{action 'signOut'}}>
-          Sign Out
-      </button>
       <button {{action 'createTodo'}}>
           New item
+      </button>
+      <button {{action 'signOut'}}>
+          Sign Out
       </button>
   {{else}}
 
@@ -32,7 +32,7 @@
               </button>
 
   {{/if}}
-        </div>   </div>
+        </div>   </div></div>
 </nav>
 <div class="container">
     <header class="header">
