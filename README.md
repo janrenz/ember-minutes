@@ -77,6 +77,7 @@ Specify what it takes to deploy your app.
  - [X]  Prev and Next Navigation in item view
  - [ ]  Logo (Tomster in Hoodie?)  
  - [ ]  Autosave should be triggered before controller is left
+ - [X]  add DueDate and overdue state
   
 
 

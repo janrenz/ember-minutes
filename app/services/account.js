@@ -47,7 +47,6 @@ export default Ember.Object.extend({
   signOut: function(options) {
     this.set('hasValidSession', false);
     this.set('user', null);
-    //store.unloadAll('todo');
     return wrapHoodiePromise(hoodie.account.signOut(options));
   }
 });

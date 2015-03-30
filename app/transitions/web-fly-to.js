@@ -15,13 +15,14 @@ export default function webFlyTo(opts={}) {
   var initialState = {
     transform: 'translateX(0px) translateY(0px)',
     width: this.oldElement.width() + 'px',
-    height: this.oldElement.height() + 'px'
+    height: this.oldElement.height() + 'px',
+    fontSize: this.oldElement.css('font-size')
   };
-
   var finalState = {
     transform: `translateX(${newOffset.left - oldOffset.left}px) translateY(${newOffset.top - oldOffset.top}px)`,
-    width: this.newElement.width(),
-    height: this.newElement.height()
+    width: this.newElement.width()+ 'px',
+    height: this.newElement.height()+ 'px',
+    fontSize: this.newElement.css('font-size')
   };
 
   return new RSVP.Promise((resolve) => {
