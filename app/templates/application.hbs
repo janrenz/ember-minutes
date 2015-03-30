@@ -1,36 +1,45 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                EmberMinutes
+            </a>
+        </div>
+
+    <div class="navbar-right">
+  {{#if accountService.hasValidSession}}
+      <button {{action 'signOut'}}>
+          Sign Out
+      </button>
+      <button {{action 'createTodo'}}>
+          New item
+      </button>
+  {{else}}
+
+              <label for="email">
+                  Email
+              </label>
+            {{input value=user.email id="email"}}
+              <label for="password">
+                  Password
+              </label>
+            {{input value=user.password id="password" type="password"}}
+              <button {{action 'signUp'}}>
+                  Sign Up
+              </button>
+              <button {{action 'signIn'}}>
+                  Sign In
+              </button>
+
+  {{/if}}
+        </div>   </div>
+</nav>
 <div class="container">
     <header class="header">
     {{#if flash}}
       <h2>{{flash}}</h2>
     {{/if}}
 
-    {{#if accountService.hasValidSession}}
-      <button {{action 'signOut'}}>
-        Sign Out
-      </button>
-      <button {{action 'createTodo'}}>
-        New item
-      </button>
-    {{else}}
-      <div>
-        <div>
-          <label for="email">
-            Email
-          </label>
-          {{input value=user.email id="email"}}
-          <label for="password">
-            Password
-          </label>
-          {{input value=user.password id="password" type="password"}}
-          <button {{action 'signUp'}}>
-            Sign Up
-          </button>
-          <button {{action 'signIn'}}>
-            Sign In
-          </button>
-        </div>
-      </div>
-    {{/if}}
      </header>
     {{liquid-outlet}}
 </div>

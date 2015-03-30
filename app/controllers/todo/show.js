@@ -23,11 +23,10 @@ export default Ember.ObjectController.extend({
       this.transitionToRoute('index');
     },
     addNote: function(){
-      var note = this.store.createRecord('note', {body: 'New note', todo: this.model});
+      var note =this.model.get('notes').createRecord( {body: 'New note'});
       note.save();
-      //this.model.get('notes').push(note);
       this.model.save();
-     // this.model.notes.push(note);
+
     }
   }
 

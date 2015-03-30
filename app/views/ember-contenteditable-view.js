@@ -55,6 +55,7 @@ export default Ember.View.extend({
   },
 
   setContent: function() {
-    return this.$().html(Ember.Handlebars.Utils.escapeExpression(this.get('value')));
+    //return this.$().html(Ember.Handlebars.Utils.escapeExpression(this.get('value')));
+    return this.$().html(this.get('value'));
   }
 });

@@ -19,13 +19,13 @@
         <div class="wrapper">
           <h3>{{view 'ember-contenteditable-view' editable=true value=item.text}}</h3>
         </div>
-        {{view 'ember-contenteditable-view' editable=true value=item.description}}
-        {{item.createdAt}}
-        <br />notes
+        {{view 'ember-contenteditable-view' plaintext=false editable=true value=item.description}}
       <hr />
       {{#each note in item.notes}}
         {{view 'ember-contenteditable-view' editable=true value=note.body}}<br />
       {{/each}}
+      <br />
+      <div class="small">{{item.createdAt}}</div>
     </div>
   </div>
   <div class="col-md-3">

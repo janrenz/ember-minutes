@@ -57,11 +57,9 @@
     findAll: function (store, type) {
       return wrapJqueryPromise(type.typeKey, hoodie.store.findAll(type.typeKey) );
     },
-
     updateRecord: function (store, type, record) {
       return wrapJqueryPromise(type.typeKey, hoodie.store.update(type.typeKey, record.id, record.attributes() ));
     },
-
     deleteRecord: function (store, type, record) {
       return wrapJqueryPromise(type.typeKey, hoodie.store.remove(type.typeKey, record.id) );
     },

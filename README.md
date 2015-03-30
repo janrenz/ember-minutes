@@ -76,6 +76,7 @@ Specify what it takes to deploy your app.
  - [ ]  Sorting
  - [X]  Prev and Next Navigation in item view
  - [ ]  Logo (Tomster in Hoodie?)  
+ - [ ]  Autosave should be triggered before controller is left
   
 
 
