@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  sortProperties: ['completed', '_updatedAt'],
+  sortProperties: ['completed'],
   sortAscending: true,
   remaining: function () {
     return this.filterBy('completed', false).get('length');
