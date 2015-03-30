@@ -1,20 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  sortProperties: ['completed'],//updatedAt
-  sortAscending: false,
   actions: {
     createTodo: function () {
-      self = this;
+      var self = this;
       var record = this.store.createRecord('todo', {text: 'New item'});
 
       record.save().then(function () {
         self.transitionToRoute('todo.show', record.id);
       }, function (err) {
-        ctrl.setFlash(err.message);
+        self.setFlash(err.message);
       });
     }
   },
+
 
   findNext:function(post){
     var posts = this.get('model');

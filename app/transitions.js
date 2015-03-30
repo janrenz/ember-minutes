@@ -15,10 +15,10 @@ export default function() {
       use: ['toDown', { duration } ]
     }),
     this.reverse('explode', {
-      matchBy: 'data-speaker-id',
+      matchBy: 'nav-id',
       use: ['webFlyTo', { duration_short } ]
     }, {
-      matchBy: 'nav-id',
+      matchBy: 'data-speaker-id',
       use: ['webFlyTo', { duration_short } ]
     }, {
       use: ['toUp', { duration_short } ]

@@ -20,6 +20,9 @@ h3 {
 
 }
 .todo-large {
+  & .wrapper {
+    padding-left:10px;
+  }
   font-size: 150%;
   & h3 {
     font-size: 250%;
@@ -34,10 +37,14 @@ h3 {
 .todo-list .wrapper:hover {
   background-color: #F0F8ff;
 }
-
-.todo .wrapper{
+.todo .wrapper {
   transition: border 1s ease-in-out;
+}
+.todo-list .todo .wrapper{
+  transition: border 1s ease-in-out;
+  border: 1px solid lightgray;
   border-left: 5px solid slategrey;
+  padding-top: 10px;
   padding-left: 5px;
   font-size:100%
 }
@@ -69,16 +76,16 @@ h3 {
 }
 
 .nav_completed_false {
-  color: orangered;
-  background-color: orangered;
-  border-left: 10px solid orangered;
+  color: orange;
+  background-color: orange;
+  border-left: 10px solid orange;
   width:20px;
   height:20px;
   min-height:20px;
 }
 .nav_completed_false > div, .nav_completed_false > a, .nav_completed_false > a:hover{
-  background-color: orangered;
-  color: orangered;
+  background-color: orange;
+  color: orange;
 }
 .todo.completed_true .wrapper{
   & h3 {
@@ -87,7 +94,7 @@ h3 {
   border-left: 5px solid darkgreen;
 }
 .todo.completed_false .wrapper{
-  border-left: 5px solid orangered;
+  border-left: 5px solid orange;
 }
 .todo h3 {
   margin-top:0px;
