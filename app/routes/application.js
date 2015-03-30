@@ -7,10 +7,7 @@ export default Ember.Route.extend({
 
   actions: {
 
-    toggleTodo: function(todo) {
-      todo.set('completed', !todo.get('completed'));
-      todo.save();
-    },
+
     signIn: function() {
       var ctrl     = this.get('controller');
       var email    = ctrl.get('user.email');

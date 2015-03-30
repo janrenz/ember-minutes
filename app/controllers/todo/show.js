@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import { computedAutosave } from 'ember-autosave';
 
-export default Ember.ObjectController.extend({
+export default Ember.Controller.extend({
   item: computedAutosave('model'),
   needs: ['application'],
   allItems: Ember.computed.alias('controllers.application.model'),
@@ -14,6 +14,10 @@ export default Ember.ObjectController.extend({
   actions:{
     next : function(){
       this.transitionToRoute('todo.show',this.get('controllers.application').findNext(this.get('model')));
+    },
+    toggleTodo: function(todo) {
+      todo.set('completed', !todo.get('completed'));
+      todo.save();
     },
     prev: function(){
       this.transitionToRoute('todo.show',this.get('controllers.application').findPrev(this.get('model')));
