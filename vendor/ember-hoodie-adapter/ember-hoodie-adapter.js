@@ -59,7 +59,6 @@
     },
 
     updateRecord: function (store, type, record) {
-      console.log()
       return wrapJqueryPromise(type.typeKey, hoodie.store.update(type.typeKey, record.id, record.attributes() ));
     },
 

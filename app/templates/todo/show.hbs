@@ -8,8 +8,7 @@
               </div>
         {{/link-to}}
       </div>
-  {{/each}}
-    <div style="clearfix"></div>
+  {{/each}}<div style="clearfix"></div>
 </div></div>
 </div>
 
@@ -22,6 +21,11 @@
         </div>
         {{view 'ember-contenteditable-view' editable=true value=item.description}}
         {{item.createdAt}}
+        <br />notes
+      <hr />
+      {{#each note in item.notes}}
+        {{view 'ember-contenteditable-view' editable=true value=note.body}}<br />
+      {{/each}}
     </div>
   </div>
   <div class="col-md-3">
@@ -45,13 +49,13 @@
       <button {{action 'destroyTodo' item}} class="btn mt10 full-width">
           Delete
       </button>
+      <button {{action 'addNote' item}} class="btn mt10 full-width">
+          Add Note
+      </button>
 
 
 
-    notes
-    {{#each note in model.notes}}
-      {{note.body}}
-    {{/each}}
+
   </div>
 </div>
 

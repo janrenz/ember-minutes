@@ -22,6 +22,13 @@ export default Ember.ObjectController.extend({
       this.model.destroyRecord();
       this.transitionToRoute('index');
     },
+    addNote: function(){
+      var note = this.store.createRecord('note', {body: 'New note', todo: this.model});
+      note.save();
+      //this.model.get('notes').push(note);
+      this.model.save();
+     // this.model.notes.push(note);
+    }
   }
 
 });

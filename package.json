@@ -42,6 +42,6 @@
     "npm": "^2.7.4"
   },
   "dependencies": {
-    "broccoli-merge-trees": "^0.2.1"
+
   }
 }

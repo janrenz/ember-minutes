@@ -17,7 +17,7 @@ export default Ember.Object.extend({
 
     Ember.run.later(this, function() {
       this._setSession();
-    }, 5000);
+    }, 2500);
 
     var auth = this;
 
