@@ -52,7 +52,13 @@
       <button {{action 'addNote' item}} class="btn mt10 full-width">
           Add Note
       </button>
-      {{bootstrap-datepicker class="fullWidth mt10" value=item.dueDate}}
+    {{view "select" content=priorities
+    optionValuePath="content.value"
+    optionLabelPath="content.name"
+    value=item.prio
+    class="full-width mt10"}}
+    <br />
+    {{bootstrap-datepicker class="full-width mt10" value=item.dueDate}}
 
 
 

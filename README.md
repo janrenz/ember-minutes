@@ -72,12 +72,15 @@ Specify what it takes to deploy your app.
  - [x]  Make title editable
  - [x]  Make description editable
  - [ ]  Allow adding of notes
- - [ ]  Show thumbnails of all items
- - [ ]  Sorting
+ - [X]  Show thumbnails of all items
+ - [X]  Sorting
  - [X]  Prev and Next Navigation in item view
  - [ ]  Logo (Tomster in Hoodie?)  
  - [ ]  Autosave should be triggered before controller is left
  - [X]  add DueDate and overdue state
+ - [ ]  add Assignees
+ - [ ]  Save changelog
+ - [ ]  Archived mode
   
 
 

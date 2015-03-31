@@ -4,6 +4,11 @@ import { computedAutosave } from 'ember-autosave';
 export default Ember.Controller.extend({
   item: computedAutosave('model'),
   needs: ['application'],
+  priorities: [
+    {name: "Low", value: 1},
+    {name: "Normal", value: 2},
+    {name: "High", value: 3}
+  ],
   allItems: Ember.computed.alias('controllers.application.model'),
   hasNext:function(){
     return this.get('controllers.application').hasNext(this.get('model'));
@@ -27,10 +32,10 @@ export default Ember.Controller.extend({
       this.transitionToRoute('index');
     },
     addNote: function(){
-      var note =this.model.get('notes').createRecord( {body: 'New note'});
-      note.save();
+      var newNote = this.store.createRecord("note", {body: "new Note"});
+      newNote.save();
+      this.model.get("notes").pushObject(newNote);
       this.model.save();
-
     }
   }
 

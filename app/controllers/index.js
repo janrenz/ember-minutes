@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  sortProperties: ['completed'],
-  sortAscending: true,
+  sortProperties: ['prio'],
+  sortAscending: false,
   remaining: function () {
     return this.filterBy('completed', false).get('length');
   }.property('@each.completed'),

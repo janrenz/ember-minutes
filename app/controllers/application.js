@@ -5,7 +5,6 @@ export default Ember.ArrayController.extend({
     createTodo: function () {
       var self = this;
       var record = this.store.createRecord('todo', {text: 'New item'});
-
       record.save().then(function () {
         self.transitionToRoute('todo.show', record.id);
       }, function (err) {
@@ -13,8 +12,7 @@ export default Ember.ArrayController.extend({
       });
     }
   },
-
-
+  
   findNext:function(post){
     var posts = this.get('model');
     var currentIndex = posts.indexOf(post);
