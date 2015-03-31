@@ -16,13 +16,18 @@ export default Ember.Controller.extend({
   hasPrevious:function(){
     return this.get('controllers.application').hasPrev(this.get('model'));
   }.property('content'),
+  isTaskDone: function(){
+    return this.get('todo.completed');
+  }.property('todo.completed'),
   actions:{
     next : function(){
       this.transitionToRoute('todo.show',this.get('controllers.application').findNext(this.get('model')));
     },
-    toggleTodo: function(todo) {
-      todo.set('completed', !todo.get('completed'));
-      //todo.save();
+    setDone: function() {
+      this.model.set('completed', true);
+    },
+    setUndone: function() {
+      this.model.set('completed', false);
     },
     prev: function(){
       this.transitionToRoute('todo.show',this.get('controllers.application').findPrev(this.get('model')));
