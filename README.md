@@ -77,11 +77,14 @@ Specify what it takes to deploy your app.
  - [X]  Sorting
  - [X]  Prev and Next Navigation in item view
  - [ ]  Logo (Tomster in Hoodie?)  
+ - [ ]  Add explicit Done and set undone buttons instead of toggle
  - [ ]  Autosave should be triggered before controller is left
  - [X]  add DueDate and overdue state
  - [ ]  add Assignees
  - [ ]  Save changelog
  - [ ]  Archived mode
+ - [ ]  Sorting by OnTheAgendaFlag
+ 
   
 
 
