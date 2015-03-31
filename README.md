@@ -84,3 +84,5 @@ Specify what it takes to deploy your app.
  - [ ]  Save changelog
  - [ ]  Archived mode
  - [ ]  Sorting by OnTheAgendaFlag
+ - [ ]  Add overdue state
+ - [ ]  Clear local stuff after logout
