@@ -5,11 +5,11 @@ export default Ember.Controller.extend({
   item: computedAutosave('model'),
   needs: ['application'],
   priorities: [
-    {name: "Low", value: 1},
-    {name: "Normal", value: 2},
-    {name: "High", value: 3}
+    {name: "Low", value: 5},
+    {name: "Normal", value:3},
+    {name: "High", value: 1}
   ],
-  allItems: Ember.computed.alias('controllers.application.model'),
+  allItems: Ember.computed.alias('controllers.application.arrangedContent'),
   hasNext:function(){
     return this.get('controllers.application').hasNext(this.get('model'));
   }.property('content'),

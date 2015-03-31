@@ -64,14 +64,15 @@ Specify what it takes to deploy your app.
  
 ## TODO
 
- - [x]  Persist todo state change
+ - [X]  Persist todo state change
  - [ ]  Get basepath for hoodie js in index from config
- - [x]  Add styling
- - [x]  Add single item view
- - [x]  Add animation in between views
- - [x]  Make title editable
- - [x]  Make description editable
- - [ ]  Allow adding of notes
+ - [X]  Add styling
+ - [X]  Add single item view
+ - [X]  Add animation in between views
+ - [X]  Make title editable
+ - [X]  Make description editable
+ - [X]  Allow adding of notes
+ - [ ]  Persist notes
  - [X]  Show thumbnails of all items
  - [X]  Sorting
  - [X]  Prev and Next Navigation in item view
