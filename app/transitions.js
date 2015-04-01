@@ -2,6 +2,7 @@ export default function() {
 
   var duration = 350;
   var duration_short = 250;
+
   this.transition(
     this.fromRoute('index'),
     this.toRoute('todo.show'),

@@ -7,5 +7,6 @@ export default DS.HoodieModel.extend({
   notes: DS.hasMany('note', { defaultValue: {}, async: false }),
   prio: DS.attr('number',{defaultValue: 1}),
   assignees: DS.hasMany('assignee', { defaultValue: {}, async: true }),
-  dueDate: DS.attr('date')
+  dueDate: DS.attr('date'),
+  scheduledForMeeting: DS.attr('boolean', {defaultValue: true})
 });
