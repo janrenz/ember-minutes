@@ -22,6 +22,11 @@ export default Ember.Controller.extend({
     },
     toggleTodo: function(todo) {
       todo.set('completed', !todo.get('completed'));
+      todo.set('scheduledForMeeting', false);
+      //todo.save();
+    },
+    scheduleForMeeting: function(todo) {
+      todo.set('scheduledForMeeting', true);
       //todo.save();
     },
     prev: function(){
@@ -35,6 +40,7 @@ export default Ember.Controller.extend({
       var newNote = this.store.createRecord("note", {body: "new Note"});
       newNote.save();
       this.model.get("notes").pushObject(newNote);
+      this.model.set('scheduledForMeeting', false);
       this.model.save();
     }
   }

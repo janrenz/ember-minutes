@@ -46,6 +46,13 @@
       <button {{action 'toggleTodo' item}} class="btn full-width mt10">
           toggle State
       </button>
+      {{#if item.scheduledForMeeting}}
+
+      {{else}}
+        <button {{action 'scheduleForMeeting' item}} class="btn full-width mt10">
+            Schedule for Meeting
+        </button>
+      {{/if}}
       <button {{action 'destroyTodo' item}} class="btn mt10 full-width">
           Delete
       </button>
