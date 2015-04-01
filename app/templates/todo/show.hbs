@@ -53,8 +53,11 @@
         </button>
       {{/if}}
       {{#if item.scheduledForMeeting}}
+        <button {{action 'scheduleForMeeting' item false}} class="btn full-width mt10">
+            Unschedule for Meeting
+        </button>
       {{else}}
-        <button {{action 'scheduleForMeeting' item}} class="btn full-width mt10">
+        <button {{action 'scheduleForMeeting' item true}} class="btn full-width mt10">
             Schedule for Meeting
         </button>
       {{/if}}

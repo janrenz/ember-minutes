@@ -29,8 +29,8 @@ export default Ember.Controller.extend({
     setUndone: function() {
       this.model.set('completed', false);
     },
-    scheduleForMeeting: function(todo) {
-      todo.set('scheduledForMeeting', true);
+    scheduleForMeeting: function(todo, v) {
+      todo.set('scheduledForMeeting', v);
     },
     prev: function(){
       this.transitionToRoute('todo.show',this.get('controllers.application').findPrev(this.get('model')));
