@@ -5,11 +5,7 @@ import { AutosaveProxy } from 'ember-autosave';
 
 export function initialize() {
   AutosaveProxy.config({
-    saveDelay: 50, // Save fast.
-    save: function() {
-      // The context here is the wrapped model
-      this.mySpecialSaveMethod()
-    }
+    saveDelay: 50 // Save fast.
   });
 }
 

@@ -29,7 +29,7 @@ module.exports = function(environment) {
     enabled: true,
     appcacheFile: "/manifest.appcache",
     excludePaths: [],
-    includePaths: ['/'],
+    includePaths: ['/', 'https://ember.appback.com/_api/_files/hoodie.js'],
     //network: ['api/']
   }
   if (environment === 'development') {
