@@ -25,8 +25,8 @@ export default Ember.Controller.extend({
       todo.set('scheduledForMeeting', false);
       //todo.save();
     },
-    scheduleForMeeting: function(todo) {
-      todo.set('scheduledForMeeting', true);
+    scheduleForMeeting: function(todo, v) {
+      todo.set('scheduledForMeeting', v);
       //todo.save();
     },
     prev: function(){
