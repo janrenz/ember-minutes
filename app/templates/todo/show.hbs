@@ -43,7 +43,6 @@
             <a class="btn btn-default disabled" >Next</a>
         {{/if}}
       </div>
-<<<<<<< HEAD
       {{#if item.completed}}
         <button {{action 'setUndone' }} class="btn full-width mt10 btn_task_{{item.completed}}">
             Set Task to Undone
@@ -53,10 +52,6 @@
             Set Task to Done
         </button>
       {{/if}}
-      {{#if item.scheduledForMeeting}}
-        <button {{action 'scheduleForMeeting' item false}} class="btn full-width mt10">
-            Unschedule for Meeting
-        </button>
       {{#if item.scheduledForMeeting}}
           <button {{action 'scheduleForMeeting' item false}} class="btn full-width mt10">
               Unschedule for Meeting
