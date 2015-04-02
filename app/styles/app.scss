@@ -128,3 +128,31 @@ button, input, select, textarea, .button {
   margin-top:15px;
   margin-right: 15px;
 }
+
+.logo {
+  position: fixed;
+  top:          0;
+  left:      50px;
+  width:     50px;
+  height:    50px
+}
+
+.minutes-text {
+  position: relative;
+  left: 36px;
+}
+
+.btn_task_false {
+  background-color: darkgreen;
+  color: white;
+  border-left: 10px solid darkgreen;
+}
+
+.btn_task_false:hover {
+  color: #FFF6CC;
+}
+
+.btn_task_true {
+  background-color: orange;
+  border-left: 10px solid orange;
+}

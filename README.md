@@ -2,7 +2,7 @@
 
 This README outlines the details of collaborating on this Ember application.
 
-This shows: 
+This shows:
 
 * How to use ember and hoodie
 * How to use cool animations
@@ -61,7 +61,7 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
- 
+
 ## TODO
 
  - [X]  Persist todo state change
@@ -77,7 +77,7 @@ Specify what it takes to deploy your app.
  - [X]  Sorting
  - [X]  Prev and Next Navigation in item view
  - [ ]  Logo (Tomster in Hoodie?)  
- - [ ]  Add explicit Done and set undone buttons instead of toggle
+ - [X]  Add explicit Done and set undone buttons instead of toggle
  - [ ]  Autosave should be triggered before controller is left
  - [X]  add DueDate and overdue state
  - [ ]  add Assignees
@@ -86,8 +86,3 @@ Specify what it takes to deploy your app.
  - [ ]  Sorting by OnTheAgendaFlag
  - [ ]  Add overdue state
  - [ ]  Clear local stuff after logout
- 
-  
-
-
- 
