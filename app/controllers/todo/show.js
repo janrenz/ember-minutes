@@ -32,6 +32,9 @@ export default Ember.Controller.extend({
     scheduleForMeeting: function(todo, v) {
       todo.set('scheduledForMeeting', v);
     },
+    scheduleForMeeting: function(todo, v) {
+      todo.set('scheduledForMeeting', v);
+    },
     prev: function(){
       this.transitionToRoute('todo.show',this.get('controllers.application').findPrev(this.get('model')));
     },
