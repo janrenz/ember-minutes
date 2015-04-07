@@ -14,7 +14,10 @@ export default Ember.ArrayController.extend({
       });
     }
   },
-
+  scheduledItems: function(){
+    var items = this.get('arrangedContent');
+    return items.filterBy('scheduledForMeeting', true);
+  }.property('arrangedContent'),
   findNext:function(post){
     var posts = this.get('arrangedContent');
     var currentIndex = posts.indexOf(post);

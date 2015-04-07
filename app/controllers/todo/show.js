@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
     {name: "Normal", value:3},
     {name: "High", value: 1}
   ],
-  allItems: Ember.computed.alias('controllers.application.arrangedContent'),
+  allItems: Ember.computed.alias('controllers.application.scheduledItems'),
   hasNext:function(){
     return this.get('controllers.application').hasNext(this.get('model'));
   }.property('content'),
