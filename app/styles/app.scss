@@ -141,15 +141,19 @@ button, input, select, textarea, .button {
 }
 .logo {
   position: fixed;
-  top:          0;
-  left:      50px;
-  width:     50px;
-  height:    50px
+  top:       5px;
+  left:      15px;
+  width:     auto;
+  height:    25px
 }
-
+.navbar-brand {
+  height: auto;
+  padding: 0px;
+}
 .minutes-text {
   position: relative;
-  left: 36px;
+  left: 15px;
+  top: 27px;
 }
 
 .btn_task_false {
