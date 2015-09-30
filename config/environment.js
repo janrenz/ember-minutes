@@ -7,11 +7,11 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     contentSecurityPolicy: {
-      'default-src': "'none' 'self' localhost localhost:6007 ember.appback.com",
-      'script-src': "'self' unsafe-eval unsafe-inline localhost:6007 ember.appback.com",
-      'connect-src': "'self' localhost:6007 ember.appback.com",
-      'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
-      'font-src': "'self' fonts.gstatic.com"
+      'default-src': "*",
+      'script-src': "*",
+      'connect-src': "*",
+      'style-src': "*",
+      'font-src': "*"
     },
     EmberENV: {
       FEATURES: {
