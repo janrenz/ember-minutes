@@ -86,3 +86,89 @@ Specify what it takes to deploy your app.
  - [ ]  Sorting by OnTheAgendaFlag
  - [ ]  Add overdue state
  - [ ]  Clear local stuff after logout
+
+## Konzept Meeting App
+
+Meetings beanpruchen für viele Arbeitnehmer, auch am HPI, jede Woche viel Zeit.
+Und doch laufen sie oft unstrukturiert ab. Wichtige Themen werden nicht
+besprochen, manche Dinge wieder und wieder besprochen, und Agendas und
+Protokolle werden kompliziert erstellt.
+
+Mit https://minutes.io gab es schon vor einigen Jahren ein Projekt welches
+sich der Themenstellung Agenda und Protokoll annahm (damals schon Offline
+fähig).
+
+Doch geht dieser Ansatz nicht weit genug, denn es reicht nicht den Excel/Word
+Workflow ins Web zu bringen, statt dessen sollte man sich fragen wie die
+Situation in Meeting Räumen oft ist. Dort gibt es oft ein Beamer oder ein
+grossen TV Screen.
+
+
+### Anforderungen
+
+- Synchronisiertes Editieren von Inhalten
+- TV optimierte Darstellung
+- Fortschrittsanzeige
+- Historie
+- Protokollfunktion
+
+### Datenmodel:
+
+- Meeting
+  - Titel
+  - Datum/Zeit (Begin)
+  - Dauer
+  - Teilnehmer
+
+- Person
+  - Email
+
+- WorkItem
+  - Title
+  - Description
+  - Status [open|scheduled|closed|...?]
+  - Links zu externen System (Gitub/ TeamCity / ..?)
+  - Attachments (später)
+  - Notes
+
+### Ansichten
+- Agenda
+- Einzelnes WorkItem
+- Protokoll
+
+### Workflows / User stories
+
+#### Anlegen von Meeting
+Um ein Meeting anzulegen markiere ich aus einer Liste von Themen, jene aus
+die ich in dem nächsten Meeting bearbeiten kann. Dies kann durch mehre Nutzer
+parallel erfolgen. Es gibt eine fixe Reihenfolge (Prios an WorkItems oder an
+Scheduled Items)
+
+#### Meeting durchführen
+Innerhalb eines Meetings gibt es zwei Ansichten die verwnedet werden: Die Agenda
+zeigt alle Themen die für das Meeting geplant sind. Die Einzelansicht zeigt ein
+einzelnes Workitem und seine Historie. Es kann direkt inline bearbeitet werden.
+Notizen können hinzugefügt werden.
+
+#### Nach dem Meeting / Protokoll
+Nach einem Meeting kann ein Protokoll erstellt werden. Dieses enthält eine
+Liste der Punkte die besprochen wurden, Änderungen die vorgenommen werden
+(Status geändert, Inhalt geändert, Notizen die hizugefügt wurden)
+
+Offene Frage: Kann ein Protokoll später noch bearbeitet werden?
+
+### Tech Stack
+
+- BaaS Framework: HOODIE, Meteor, ..?
+- Offline First / Offline fähig
+- Client Side Rendering (EmberJS, React, Angular)
+- Anbindung an externe Systeme (ToDos)
+- optional Packaging als App (GitHub Atom)
+- optional erzeugen von Protokollen (Mail oder PDF)
+
+Das Tool soll als OpenSource auf GitHub veröffentlicht werden.
+
+### Weitere Ideen: Gamification
+
+Bspw: Aufmunternde  Screen am Anfang vom Meeting.
+Badges wenn mehr als n items erledigt werden oder man früher als geplant mit dem Meeting durch ist...
